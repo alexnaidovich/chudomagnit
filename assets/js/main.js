@@ -1,3 +1,6 @@
+// require ./thirdparty/bideo.js
+// require ../../node_modules/smooth-scrollbar/dist/smooth-scrollbar.js
+
 (function () {
 
     var bv = new Bideo();
@@ -37,4 +40,19 @@
         console.log('video loaded');
       }
     });
-  }());
+}());
+
+
+Scrollbar.init(document.querySelector('main'));
+
+let windowTop;
+window.addEventListener('wheel', e => {
+    if (document.querySelector('div.scroll-content').style.transform) {
+        windowTop = +(document.querySelector('div.scroll-content').style.transform.split(', ')[1].split('').filter(n => !isNaN(+n)).join(''));
+        if (windowTop >= window.innerHeight - 111) {
+            document.querySelector('header').classList.add('onsecond');
+        } else {
+            document.querySelector('header').classList.remove('onsecond');
+        }
+    }
+});
