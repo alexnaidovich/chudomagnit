@@ -1,0 +1,14 @@
+{
+  "name": "chudo-magnit",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "./assets/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "smooth-scrollbar": "^8.3.0"
+  }
+}
